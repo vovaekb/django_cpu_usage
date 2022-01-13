@@ -25,8 +25,9 @@ Run the client script:
 ```bash
 python3 cpu_usage_service.py
 ```
-
-Open admin panel: http://127.0.0.1:8001/admin. Under admin account you can edit records in database. 
+To see the running service use command
+```bash
+ps ax | grep cpu_usage_service
+```
 You can see page with last 100 records on page: 
-To see records API data open page:  http://127.0.0.1:8001/api/lessons/.
-To see 
+To see records API data open page:  http://127.0.0.1:8001/api/records.
