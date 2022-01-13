@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    <h1>Потребление CPU (%)</h1>
+    {% for record in last_records %}
+    <small>{{ record.date_time }} - </small>
+    <small>{{ record.value }}</small><hr/>
+    {% endfor %}
+    <p>Max value over last 100: {{max_last_record.value__max}}</p>
+    <p>Min value over last 100: {{min_last_record.value__min}}</p>
+    <p>Average value over last 100: {{avg_last_record.value__avg}}</p>
+</div>
+{% endblock %}
